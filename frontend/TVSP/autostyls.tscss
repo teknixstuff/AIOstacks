@@ -1,0 +1,84 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
+[x-type|="button"] {
+  --main-color: hsl(195, 100%, 50%);
+  --dark-color: hsl(195, 100%, 25%);
+  --light-color: hsl(195, 100%, 65%);
+  transition: background-color 0.5s;
+  display: inline-block;
+  color: white;
+  background-color: var(--main-color);
+  outline: none;
+  border: 1px solid LightGray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0px 5px;
+  margin: 5px;
+  height: 1.5em;
+  line-height: 1.5em;
+  &:hover {
+    background-color: var(--light-color);
+  }
+  &:active {
+    background-color: var(--dark-color);
+  }
+  &[x-extype~="alt"] {
+    --main-color: hsl(0, 0%, 95%);
+    --dark-color: hsl(0, 0%, 90%);
+    --light-color: hsl(0, 0%, 98%);
+    color: black;
+  }
+  &[x-extype~="red"] {
+    --main-color: hsl(0, 100%, 50%);
+    --dark-color: hsl(0, 100%, 25%);
+    --light-color: hsl(0, 100%, 70%);
+    color: white;
+  }
+  &[x-extype~="green"] {
+    --main-color: hsl(120, 61%, 50%);
+    --dark-color: hsl(120, 61%, 25%);
+    --light-color: hsl(120, 61%, 65%);
+    color: white;
+  }
+  &[x-extype~="square"] {
+    border-radius: 0px;
+  }
+}
+
+[x-type|="textinput"] {
+  transition: background-color 0.5s;
+  display: inline-block;
+  color: black;
+  background-color: hsl(0, 0%, 95%);
+  outline: none;
+  border: 1px solid LightGray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0px 5px;
+  margin: 5px;
+  height: 1.5em;
+  line-height: 1.5em;
+  &:hover, &:focus {
+    background-color: hsl(0, 0%, 98%);
+  }
+  &[value]:not([x-extype~="hidevalid"]):not([value=""]):not(:focus):valid {
+    border: 1px solid lime;
+  }
+  &:focus {
+    border: 1px solid DeepSkyBlue;
+  }
+  &:invalid {
+    border: 1px solid red;
+  }
+  &[x-extype~="square"] {
+    border-radius: 0px;
+  }
+}
+
+[x-type|="link"] {
+  transition: background-color 0.5s;
+  display: inline-block;
+  color: black;
+  text-decoration: underline;
+}
