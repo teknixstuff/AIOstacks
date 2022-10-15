@@ -45,6 +45,9 @@ AIO.autostyls.typeswaps = {
     code: elem=>{
       if (elem.getAttribute('x-name')=='background-image'){
         document.body.style.backgroundImage = `url('${elem.getAttribute('x-value')}')`;
+        document.body.style.backgroundPosition = 'center center';
+        document.body.style.backgroundAttachment = 'fixed';
+        document.body.style.backgroundRepeat='no-repeat';
       }
     }
   }
