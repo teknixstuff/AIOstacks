@@ -18,6 +18,9 @@ AIO.autostyls = ()=>{
       newElem.appendChild(child);
     });
     node.replaceWith(newElem);
+    if (AIO.autostyls.typeswaps[node.attributes['x-type'].value].hasOwnProperty('code')) {
+      AIO.autostyls.typeswaps[node.attributes['x-type'].value].code.call(newElem);
+    }
   });
 };
 AIO.autostyls.typeswaps = {
@@ -35,6 +38,14 @@ AIO.autostyls.typeswaps = {
     type: 'a',
     defaultAttributes: {
       'href': 'javascript:undefined;'
+    }
+  },
+  'config': {
+    type: 'meta',
+    code: elem=>{
+      if (elem.getAttribute('name')=='background-image'){
+        document.body.style.backgroundImage = `url('${elem.getAttribute('value')}')`;
+      }
     }
   }
 };
