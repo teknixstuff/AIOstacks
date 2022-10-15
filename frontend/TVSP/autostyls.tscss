@@ -88,5 +88,5 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  filter: invert(0) greyscale(1) contrast(9);
+  filter: invert(1) greyscale(1) contrast(9);
 }
