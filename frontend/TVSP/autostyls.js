@@ -19,7 +19,7 @@ AIO.autostyls = ()=>{
     });
     node.replaceWith(newElem);
     if (AIO.autostyls.typeswaps[node.attributes['x-type'].value].hasOwnProperty('code')) {
-      AIO.autostyls.typeswaps[node.attributes['x-type'].value].code.call(newElem);
+      AIO.autostyls.typeswaps[node.attributes['x-type'].value].code(newElem);
     }
   });
 };
