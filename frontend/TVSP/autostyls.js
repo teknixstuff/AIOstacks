@@ -47,7 +47,8 @@ AIO.autostyls.typeswaps = {
         document.body.style.backgroundImage = `url('${elem.getAttribute('x-value')}')`;
         document.body.style.backgroundPosition = 'center center';
         document.body.style.backgroundAttachment = 'fixed';
-        document.body.style.backgroundRepeat='no-repeat';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundSize = 'cover';
       }
     }
   }
