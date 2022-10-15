@@ -43,8 +43,8 @@ AIO.autostyls.typeswaps = {
   'config': {
     type: 'meta',
     code: elem=>{
-      if (elem.getAttribute('name')=='background-image'){
-        document.body.style.backgroundImage = `url('${elem.getAttribute('value')}')`;
+      if (elem.getAttribute('x-name')=='background-image'){
+        document.body.style.backgroundImage = `url('${elem.getAttribute('x-value')}')`;
       }
     }
   }
